@@ -79,7 +79,7 @@ public class UserEntityService {
     }
 
     @Transactional
-    public void deleteAuthor(Long id) {
+    public void deleteUser(Long id) {
         repository.deleteById(id);
     }
 }

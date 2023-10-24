@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface UserEntityRepository  extends JpaRepository<UserEntity, Long> {
 
     @Query("SELECT us FROM UserEntity us JOIN FETCH us.userSiteList WHERE us.id = :id")
-    Optional<UserEntity> findByIdWithArticles(@Param("id") long id);
+    Optional<UserEntity> findByIdWithSites(@Param("id") Long id);
 
     @Query("SELECT us FROM UserEntity us JOIN FETCH us.userSiteList")
     List<UserEntity> findAllWithSites();

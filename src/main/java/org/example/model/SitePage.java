@@ -16,18 +16,18 @@ public class SitePage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String namePage;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Advertising> advertisingList = new ArrayList<>();
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -47,6 +47,18 @@ public class SitePage {
         this.advertisingList = advertisingList;
     }
 
+    public void addAdvertising(Advertising advertising) {
+        if (this.advertisingList == null) {
+            this.advertisingList = new ArrayList<>();
+        }
+
+        if (advertising.getSitePageList() == null) {
+            advertising.setSitePageList(new ArrayList<>());
+        }
+
+        this.advertisingList.add(advertising);
+        advertising.getSitePageList().add(this);
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

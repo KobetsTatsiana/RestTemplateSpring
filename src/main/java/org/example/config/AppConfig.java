@@ -25,7 +25,6 @@ import java.util.Properties;
 @EnableJpaRepositories(basePackages = "org.example")
 @PropertySource("classpath:db.properties")
 public class AppConfig {
-
     @Autowired
     private Environment environment;
 
@@ -40,7 +39,7 @@ public class AppConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan( "org.example" );
+        em.setPackagesToScan("org.example");
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         em.setJpaProperties(hibernateProperties());
         return em;
@@ -50,7 +49,7 @@ public class AppConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-        dataSource.setDriverClassName( Objects.requireNonNull( environment.getProperty( "dataSourceClassName" ) ) );
+        dataSource.setDriverClassName(Objects.requireNonNull(environment.getProperty("dataSourceClassName")));
 
         if (Arrays.asList(environment.getActiveProfiles()).contains("test")) {
             dataSource.setUrl(environment.getProperty("dataSource.url"));
@@ -65,7 +64,6 @@ public class AppConfig {
 
         return dataSource;
     }
-
 
     @Bean
     public JpaTransactionManager transactionManager() {

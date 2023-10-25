@@ -1,7 +1,5 @@
 package org.example.service.dto;
 
-import org.example.model.UserSite;
-
 import java.util.ArrayList;
 import java.util.List;
 

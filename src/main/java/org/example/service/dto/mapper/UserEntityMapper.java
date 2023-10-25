@@ -8,7 +8,6 @@ import org.mapstruct.Mappings;
 
 import java.util.List;
 
-
 @Mapper(componentModel = "spring", uses = UserSiteMapper.class)
 public interface UserEntityMapper {
     @Mappings({
@@ -30,5 +29,6 @@ public interface UserEntityMapper {
     UserEntity toEntity(UserEntityServiceDto dto);
 
     List<UserEntityServiceDto> toDTOList(List<UserEntity> entities);
+
     List<UserEntity> toEntityList(List<UserEntityServiceDto> dtos);
 }

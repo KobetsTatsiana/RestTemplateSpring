@@ -8,7 +8,6 @@ public class SitePageServiceDto {
 
     private String namePage;
 
-
     private List<AdvertisingServiсeDto> advertisingList;
 
     public Long getId() {

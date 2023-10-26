@@ -2,6 +2,7 @@ package org.example.service.dto.mapper;
 
 import org.example.model.UserSite;
 import org.example.service.dto.UserSiteServiceDto;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Named;
 

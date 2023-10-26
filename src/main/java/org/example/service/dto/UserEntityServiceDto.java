@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserEntityServiceDto {
-
     private Long id;
     private String name;
     private String surname;
@@ -44,7 +43,7 @@ public class UserEntityServiceDto {
     }
 
     public List<UserSiteServiceDto> getUserSiteList() {
-        if(this.userSiteList == null){
+        if (this.userSiteList == null) {
             this.userSiteList = new ArrayList<>();
         }
         return this.userSiteList;

@@ -1,23 +1,14 @@
 package org.example.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 public class SitePage {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String namePage;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -59,6 +50,7 @@ public class SitePage {
         this.advertisingList.add(advertising);
         advertising.getSitePageList().add(this);
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

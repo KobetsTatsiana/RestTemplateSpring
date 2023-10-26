@@ -3,6 +3,7 @@ package org.example.controllers;
 import org.example.service.UserEntityService;
 import org.example.service.dto.UserEntityServiceDto;
 import org.example.service.dto.UserSiteServiceDto;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -64,5 +65,4 @@ public class UserEntityController {
         service.deleteUser(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 }

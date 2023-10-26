@@ -1,11 +1,6 @@
 package org.example.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +18,10 @@ public class Advertising {
     @ManyToMany(mappedBy = "advertisingList", fetch = FetchType.EAGER)
     private List<SitePage> sitePageList = new ArrayList<>();
 
-    public Advertising(){}
+    public Advertising() {
+    }
 
-    public Advertising(String infoText){
+    public Advertising(String infoText) {
         this.infoText = infoText;
     }
 

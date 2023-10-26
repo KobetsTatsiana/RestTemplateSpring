@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
 class UserSiteTest {
-
     private UserSite userSite;
     private final Long id = 1L;
     private final UserEntity userEntity = new UserEntity();

@@ -7,16 +7,13 @@ import java.util.Objects;
 @Entity
 @Table(name = "usersite")
 public class UserSite {
-
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
     private Long id;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private UserEntity userId;
-
     @Column(name = "namesite")
     private String nameSite;
 

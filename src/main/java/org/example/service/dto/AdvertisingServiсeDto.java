@@ -3,11 +3,8 @@ package org.example.service.dto;
 import java.util.List;
 
 public class AdvertisingServiсeDto {
-
     private Long id;
-
     private String infoText;
-
     private List<SitePageServiceDto> sitePageList;
 
     public Long getId() {

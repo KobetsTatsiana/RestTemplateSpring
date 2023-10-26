@@ -1,6 +1,7 @@
 package org.example.model;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -23,7 +24,7 @@ class UserEntityTest extends Throwable {
         userEntity2.setUserSiteList(Arrays.asList(new UserSite()));
 
         assertTrue(userEntity1.equals(userEntity2) && userEntity2.equals(userEntity1));
-        assertTrue(userEntity1.getName().equals(userEntity2.getName()) && userEntity1.getSurname().equals(userEntity2.getSurname()) && userEntity1.getAddress().equals(userEntity2.getAddress()) &&  userEntity2.getUserSiteList().equals(userEntity1.getUserSiteList()));
+        assertTrue(userEntity1.getName().equals(userEntity2.getName()) && userEntity1.getSurname().equals(userEntity2.getSurname()) && userEntity1.getAddress().equals(userEntity2.getAddress()) && userEntity2.getUserSiteList().equals(userEntity1.getUserSiteList()));
         assertEquals(userEntity1.hashCode(), userEntity2.hashCode());
 
         UserSite userSite = new UserSite();
@@ -61,7 +62,6 @@ class UserEntityTest extends Throwable {
         userEntity2.setSurname("Ivanov");
         userEntity2.setAddress("Ivanovo");
         userEntity2.setUserSiteList(Arrays.asList(new UserSite(), new UserSite()));
-
 
         assertTrue(userEntity1.equals(userEntity2) && userEntity2.equals(userEntity1));
     }
@@ -120,7 +120,6 @@ class UserEntityTest extends Throwable {
         userEntity.setSurname("Test Surname");
         userEntity.setAddress("Test Address");
         userEntity.setUserSiteList(Arrays.asList(new UserSite(), new UserSite()));
-
 
         String expectedString = "UserEntity{" +
                 "id=" + 1 +

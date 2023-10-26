@@ -2,19 +2,15 @@ package org.example.model;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 @Table(name = "userentity")
 public class UserEntity {
-
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
     private Long id;
-
     @Column(name="name")
     private String name;
     @Column(name="surname")

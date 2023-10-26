@@ -2,6 +2,7 @@ package org.example.service.dto.mapper;
 
 import org.example.model.UserEntity;
 import org.example.service.dto.UserEntityServiceDto;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

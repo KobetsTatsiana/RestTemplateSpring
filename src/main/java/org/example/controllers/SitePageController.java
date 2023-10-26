@@ -2,6 +2,7 @@ package org.example.controllers;
 
 import org.example.service.SitePageService;
 import org.example.service.dto.SitePageServiceDto;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +38,7 @@ public class SitePageController {
 
     @PostMapping()
     public ResponseEntity<SitePageServiceDto> createPage(@RequestBody SitePageServiceDto dto) {
-        SitePageServiceDto createdDto = sitePageService.createOrUpdatePage( dto);
+        SitePageServiceDto createdDto = sitePageService.createOrUpdatePage(dto);
         return new ResponseEntity<>(createdDto, HttpStatus.CREATED);
     }
 

@@ -15,10 +15,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserEntityService {
-
     private final UserEntityRepository repository;
     private final UserEntityMapper mapper;
-
 
     @Autowired
     public UserEntityService(UserEntityRepository repository, UserEntityMapper mapper) {
@@ -63,7 +61,6 @@ public class UserEntityService {
                     existingUser.getUserSiteList().add(updatingSite);
                 }
             }
-
 
             updatingUser = repository.save(existingUser);
         } else {
